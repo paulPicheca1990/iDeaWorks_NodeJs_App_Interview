@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="../javascripts/main.js" ></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>Here we will introduce the Patient Registration APP and API</p>
+    <p class="error paddMore">Please note fields marked with a (*) are required</p>
+    <form id="newPatient_Form" method="POST">
+      <fieldset>
+        <table class="formTable">
+          <!-- First Name -->
+          <tr>
+            <td>
+              <label for="first_name">* First Name</label>
+            </td>
+            <td>
+              <input type="text" class="largeInput" name="first_name" id="firstName" />
+            </td>
+          </tr>
+          <tr>
+            <!-- Middle Name -->
+            <td>
+              <label for="middle_name">Middle Name</label>
+            </td>
+            <td>
+              <input type="text" class="largeInput" name="middle_name" id="middleName" />
+            </td>
+          </tr>
+          <tr>
+            <!-- Last Name -->
+            <td>
+              <label for="last_name">* Last Name</label>
+            </td>
+            <td>
+              <input type="text" class="largeInput" name="last_name" id="lastName" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <table class="formTable">
+          <!-- Gender -->
+          <tr>
+            <td>
+              <label for="gender">* Gender</label>
+            </td>
+            <td>
+              <label for="gender">Male</label>
+              <input type="radio" name="gender" id="gender" value="Male" checked="checked"/>
+              <label for="gender">Female</label>
+              <input type="radio" name="gender" id="gender" value="Female" />
+            </td>
+          </tr>
+          <!-- DOB -->
+          <tr>
+            <td>
+              <label for="date_of_birth">* Date of Birth</label>
+            </td>
+            <td>
+              <input type="text" class="largeInput" name="date_of_birth" id="dob" />
+            </td>
+          </tr>
+          <!-- Address -->
+          <tr>
+            <td>
+              <label for="address">* Address</label>
+            </td>
+            <td>
+              <input type="text" class="largeInput" name="address" id="address" />
+            </td>
+          </tr>
+          <!-- OHC # -->
+          <tr>
+            <td>
+              <label for="ohc">* Ontario Health Card #</label>
+            </td>
+            <td>
+              <input type="text" class="largeInput" name="ohc" id="ohc" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <table class="formTable">
+          <!-- Generic Notes -->
+          <tr>
+            <td>
+              <label for="gen_notes">Generic Notes</label>
+            </td>
+            <td>
+              <textarea type="text" class="largeInput" rows="4" cols="20" name="gen_notes" id="gen_notes"></textarea>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <input id="submitButton" type="submit" value="Submit" />
+      <input id="clearButton" type="button" value="Clear" />
+    </form><br/><br/>
+
+    <table id="patient_records">
+    </table>
+  </body>
+</html>
